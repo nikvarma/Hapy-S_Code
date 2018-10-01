@@ -15,5 +15,6 @@ namespace Hapy.Models
         public bool ChatBlocked { get; set; }
         public bool IsActive { get; set; }
         public bool Status { get; set; }
+        public bool isSave { get; set; }
     }
 }

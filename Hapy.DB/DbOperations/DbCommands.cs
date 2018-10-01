@@ -95,6 +95,11 @@ namespace Hapy.DB
             _dbContext.Set<TBase>().Remove(FetchSingleRecord<TBase>(id));
         }
 
+        public IEnumerable<TBase> SqlQuery<TBase>(string spName, params object[] spParams)
+        {
+            return _dbContext.Database.SqlQuery<TBase>(spName, spParams);
+        }
+
         public IEnumerable<TBase> GetOnSP<TBase>(string spName, Guid searchBy, int pageNumber, int pageSize, Guid? id, string searchTxt, string searchOn, object searchType, bool? searchIsActive, bool? searchStatus)
         {
             try

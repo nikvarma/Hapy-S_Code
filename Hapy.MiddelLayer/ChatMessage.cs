@@ -3,6 +3,7 @@ using Hapy.DB;
 using Hapy.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,21 +22,11 @@ namespace Hapy.MiddelLayer
 
         public ActionReturn Insert(Models.CallChatSetting setting)
         {
-            filter.Add("CFromId", new FilterCondition()
-            {
-                Condition = Condition.Or,
-                Operation = CommonLibrary.Operation.EqualTo,
-                Value = setting.FromId.ToString()
-            });
-            filter.Add("CToId", new FilterCondition()
-            {
-                Condition = Condition.Or,
-                Operation = CommonLibrary.Operation.EqualTo,
-                Value = setting.ToId.ToString()
-            });
             bool status = false;
-            DB.CallChatSetting chatSestting = _dbCommands.FetchRecords<DB.CallChatSetting>(new Filter() { FilterOn = filter }).SingleOrDefault();
-            if (chatSestting == null)
+            DB.CallChatSetting chatSestting = _dbCommands.SqlQuery<DB.CallChatSetting>("getSP_ChatId @fid, @tid",
+                new SqlParameter() { ParameterName = "@fid", DbType = System.Data.DbType.Guid, Value = setting.FromId },
+                new SqlParameter() { ParameterName = "@tid", DbType = System.Data.DbType.Guid, Value = setting.ToId }).SingleOrDefault();
+            if (chatSestting == null && setting.isSave)
             {
                 chatSestting = Assgin(setting);
                 _dbCommands.Insert(chatSestting);
@@ -43,7 +34,7 @@ namespace Hapy.MiddelLayer
             }
             return new ActionReturn()
             {
-                Id = chatSestting.CId,
+                Id = chatSestting?.CId,
                 Status = status,
             };
         }
