@@ -22,6 +22,7 @@ namespace Hapy.MiddelLayer
 
         public ActionReturn Insert(Models.CallChatSetting setting)
         {
+
             bool status = false;
             DB.CallChatSetting chatSestting = _dbCommands.SqlQuery<DB.CallChatSetting>("getSP_ChatId @fid, @tid",
                 new SqlParameter() { ParameterName = "@fid", DbType = System.Data.DbType.Guid, Value = setting.FromId },
