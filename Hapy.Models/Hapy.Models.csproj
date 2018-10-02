@@ -57,6 +57,7 @@
     <Compile Include="FToken.cs" />
     <Compile Include="Likes.cs" />
     <Compile Include="LocationDetail.cs" />
+    <Compile Include="LocationImage.cs" />
     <Compile Include="Logging.cs" />
     <Compile Include="Medias.cs" />
     <Compile Include="Messages.cs" />

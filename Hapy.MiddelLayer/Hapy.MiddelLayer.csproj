@@ -33,6 +33,7 @@
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +54,7 @@
     <Compile Include="IChatMessage.cs" />
     <Compile Include="IDevice.cs" />
     <Compile Include="IFirebase.cs" />
+    <Compile Include="ILocation.cs" />
     <Compile Include="ILogging.cs" />
     <Compile Include="INewsAPI.cs" />
     <Compile Include="IOTP.cs" />
@@ -60,6 +62,7 @@
     <Compile Include="ISearch.cs" />
     <Compile Include="IUserConnectRequest.cs" />
     <Compile Include="IUsers.cs" />
+    <Compile Include="Location.cs" />
     <Compile Include="Logging.cs" />
     <Compile Include="NewsAPI.cs" />
     <Compile Include="OTP.cs" />
