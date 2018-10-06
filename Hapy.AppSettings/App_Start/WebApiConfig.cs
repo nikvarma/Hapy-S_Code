@@ -11,7 +11,7 @@ namespace Hapy.AppSettings
         public static void Register(HttpConfiguration config)
         {
 
-            var cros = new EnableCorsAttribute("*");
+            var cros = new EnableCorsAttribute("*", "*", "*");
             config.MapHttpAttributeRoutes();
             config.EnableCors(cros);
             config.Routes.MapHttpRoute(
