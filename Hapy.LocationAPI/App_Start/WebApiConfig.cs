@@ -10,7 +10,7 @@ namespace Hapy.LocationAPI
     {
         public static void Register(HttpConfiguration config)
         {
-            var cros = new EnableCorsAttribute("*", "*", "GET,POST,PUT,DELETE", "*");
+            var cros = new EnableCorsAttribute("*", "*", "*");
             config.MapHttpAttributeRoutes();
             config.EnableCors(cros);
             config.Routes.MapHttpRoute(

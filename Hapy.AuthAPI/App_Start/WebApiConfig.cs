@@ -11,7 +11,7 @@ namespace Hapy.AuthAPI
         public static void Register(HttpConfiguration config)
         {
 
-            var cros = new EnableCorsAttribute("*", "*", "GET,POST,PUT,DELETE", "*");
+            var cros = new EnableCorsAttribute("*", "*", "*");
             // Web API configuration and services
 
             // Web API routes

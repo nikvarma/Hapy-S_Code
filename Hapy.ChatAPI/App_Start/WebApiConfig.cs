@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Hapy.ChatAPI
 {
@@ -9,8 +10,9 @@ namespace Hapy.ChatAPI
     {
         public static void Register(HttpConfiguration config)
         {
+            var cros = new EnableCorsAttribute("*", "*", "*");
             config.MapHttpAttributeRoutes();
-
+            config.EnableCors(cros);
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
