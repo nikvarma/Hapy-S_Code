@@ -8,5 +8,11 @@ namespace Hapy.Models
 {
     public class Comments: BasePost
     {
+        public Guid PostId { get; set; }
+    }
+
+    public class SubComments : Comments
+    {
+        public Guid CommentId { get; set; }
     }
 }

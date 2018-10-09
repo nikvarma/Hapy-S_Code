@@ -8,5 +8,6 @@ namespace Hapy.Models
 {
     public class Views: BasePost
     {
+        public Guid PId { get; set; }
     }
 }

@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hapy.Models
+namespace Hapy.DynamoDB
 {
-    public class Share : BasePost
+    public class Class1
     {
-        public Guid PostId { get; set; }
     }
 }

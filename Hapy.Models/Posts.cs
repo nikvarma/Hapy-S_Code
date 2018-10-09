@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hapy.Models
 {
-    public class Posts: BasePost
+    public class Posts : BasePost
     {
         public Guid ViewId { get; set; }
         public Guid LikeId { get; set; }
@@ -23,11 +23,23 @@ namespace Hapy.Models
         public IEnumerable<Comments> Comments { get; set; }
     }
 
-    public class BasePost: BaseObject
+    public class BasePost : PostIds
+    {
+        public object ContentText { get; set; } = null;
+        public int Type { get; set; }
+        public object Media { get; set; } = null;
+        public string VisibleTo { get; set; }
+        public object Location { get; set; } = null;
+        public object TaggedTo { get; set; } = null;
+        public bool IsBadReported { get; set; }
+        public object FeelingIcon { get; set; } = null;
+    }
+
+    public class PostIds : BaseObject
     {
         public Guid Id { get; set; }
         public Guid ToId { get; set; }
         public Guid FromId { get; set; }
-        public string ContentText { get; set; }
     }
+
 }

@@ -106,7 +106,9 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Base\BaseController.cs" />
+    <Compile Include="Controllers\GetPostController.cs" />
     <Compile Include="Controllers\NewsAPIController.cs" />
+    <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\ScarpingWebController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">

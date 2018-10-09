@@ -4,7 +4,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Twilio.Rest.Chat.V2;
 
 namespace Hapy.MessageAPI.Controllers
 {
@@ -17,7 +16,7 @@ namespace Hapy.MessageAPI.Controllers
         {
             return GetJsonResult(new Models.BaseResponse()
             {
-                ResponseObject = ServiceResource.Read(),
+                ResponseObject = new { },
                 Message = "",
                 StatusCode = 200
             });

@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hapy.Twilio", "Hapy.Twilio\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hapy.CallAPI", "Hapy.CallAPI\Hapy.CallAPI.csproj", "{F6EF50F8-F131-4102-9167-4DA715430CE3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hapy.DynamoDB", "Hapy.DynamoDB\Hapy.DynamoDB.csproj", "{2749A421-C677-44CF-B6B1-47F981EDF501}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{F6EF50F8-F131-4102-9167-4DA715430CE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6EF50F8-F131-4102-9167-4DA715430CE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6EF50F8-F131-4102-9167-4DA715430CE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2749A421-C677-44CF-B6B1-47F981EDF501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2749A421-C677-44CF-B6B1-47F981EDF501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2749A421-C677-44CF-B6B1-47F981EDF501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2749A421-C677-44CF-B6B1-47F981EDF501}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

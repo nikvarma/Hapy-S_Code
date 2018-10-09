@@ -11,5 +11,6 @@ namespace Hapy.Models
         public DateTime CreatedDateTime { get; set; }
         public DateTime ModifiedDateTime { get; set; }
         public bool IsActive { get; set; }
+        public bool Status { get; set; }
     }
 }

@@ -10,4 +10,9 @@ namespace Hapy.Models
     {
         public string jsonResult { get; set; }
     }
+
+    public class SearchPosts
+    {
+        public object jsonResult { get; set; }
+    }
 }

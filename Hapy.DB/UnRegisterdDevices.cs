@@ -16,10 +16,8 @@ namespace Hapy.DB
 
         public int uRDtype { get; set; }
 
-
         [ForeignKey("uRDtype")]
         public Device Devices { get; set; }
-
 
         public Guid TokenId { get; set; }
 

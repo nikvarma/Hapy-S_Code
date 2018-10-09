@@ -5,7 +5,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
-using Twilio;
 
 namespace Hapy.MessageAPI
 {
@@ -16,7 +15,6 @@ namespace Hapy.MessageAPI
 
         protected void Application_Start()
         {
-            TwilioClient.Init(accountSid, authToken);
             GlobalConfiguration.Configure(WebApiConfig.Register);
             GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.Formatting = Newtonsoft.Json.Formatting.Indented;
             GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;

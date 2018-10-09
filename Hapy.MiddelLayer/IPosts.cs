@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hapy.Models
+namespace Hapy.MiddelLayer
 {
-    public class Share : BasePost
+    public interface IPosts
     {
-        public Guid PostId { get; set; }
     }
 }
