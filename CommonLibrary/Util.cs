@@ -29,7 +29,7 @@ namespace CommonLibrary
         {
             if (ifNoDirCreate)
             {
-                Directory.CreateDirectory(ServerPath(filename), new System.Security.AccessControl.DirectorySecurity());
+                Directory.CreateDirectory(ServerPath(filename));
             }
             return Directory.Exists(ServerPath(filename));
         }

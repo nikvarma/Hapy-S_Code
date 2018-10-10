@@ -10,7 +10,7 @@ namespace Hapy.NewsAPI
     {
         public static void Register(HttpConfiguration config)
         {
-            var cros = new EnableCorsAttribute("*", "*", "*");
+            var cros = new EnableCorsAttribute("*", "*", "POST,PUT,GET,DELETE,OPTIONS");
             config.MapHttpAttributeRoutes();
             config.EnableCors(cros);
             config.Routes.MapHttpRoute(

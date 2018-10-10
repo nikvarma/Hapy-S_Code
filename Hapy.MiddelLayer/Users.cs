@@ -148,7 +148,13 @@ namespace Hapy.MiddelLayer
 
         public bool Update(UserInfo userInfo)
         {
-            _dbCommands.ActionState(AssginUpdate(userInfo), System.Data.Entity.EntityState.Modified);
+            UsersInfo usersInfo = _dbCommands.FetchSingleRecord<UsersInfo>(userInfo.UId);
+            usersInfo.UName = userInfo.Name;
+            usersInfo.UFname = userInfo.Fname;
+            usersInfo.ULName = userInfo.LName;
+            usersInfo.UGender = userInfo.Gender;
+            usersInfo.UDOB = userInfo.DOB;
+            _dbCommands.ActionState(usersInfo, System.Data.Entity.EntityState.Modified);
             return _dbCommands.Save();
         }
 

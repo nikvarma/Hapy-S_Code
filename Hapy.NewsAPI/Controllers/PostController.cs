@@ -18,14 +18,14 @@ namespace Hapy.NewsAPI.Controllers
             return GetJsonResult(new BaseResponse()
             {
                 ResponseObject = new MiddelLayer.Posts().Insert(post),
-                Message = "",
+                Message = "Post created successfully.",
                 StatusCode = 200
             });
         }
 
         [HttpPut]
         [Route("hiderequest")]
-        public IHttpActionResult PostHide(PostIds search, [FromUri] string hideType)
+        public IHttpActionResult PostHide([FromBody]PostIds search, [FromUri] string hideType)
         {
             return GetJsonResult(new BaseResponse()
             {
@@ -49,7 +49,7 @@ namespace Hapy.NewsAPI.Controllers
 
         [HttpPut]
         [Route("share")]
-        public IHttpActionResult Postshare(Share share)
+        public IHttpActionResult Postshare([FromBody]Share share)
         {
             return GetJsonResult(new BaseResponse()
             {
@@ -61,7 +61,7 @@ namespace Hapy.NewsAPI.Controllers
 
         [HttpPut]
         [Route("comment")]
-        public IHttpActionResult PostComment(Comments comments)
+        public IHttpActionResult PostComment([FromBody]Comments comments)
         {
             return GetJsonResult(new BaseResponse()
             {
@@ -73,7 +73,7 @@ namespace Hapy.NewsAPI.Controllers
 
         [HttpPut]
         [Route("updatecomment")]
-        public IHttpActionResult PostUpdateComment(Comments comments, [FromUri]string action)
+        public IHttpActionResult PostUpdateComment([FromBody]Comments comments, [FromUri]string action)
         {
             return GetJsonResult(new BaseResponse()
             {
@@ -85,7 +85,7 @@ namespace Hapy.NewsAPI.Controllers
 
         [HttpPut]
         [Route("subcomment")]
-        public IHttpActionResult PostSubComment(SubComments comments)
+        public IHttpActionResult PostSubComment([FromBody]SubComments comments)
         {
             return GetJsonResult(new BaseResponse()
             {
@@ -97,7 +97,7 @@ namespace Hapy.NewsAPI.Controllers
 
         [HttpPut]
         [Route("updatesubcomment")]
-        public IHttpActionResult PostUpdateSubComment(SubComments comments, [FromUri]string action)
+        public IHttpActionResult PostUpdateSubComment([FromBody]SubComments comments, [FromUri]string action)
         {
             return GetJsonResult(new BaseResponse()
             {
