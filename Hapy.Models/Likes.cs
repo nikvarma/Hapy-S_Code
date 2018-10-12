@@ -8,5 +8,6 @@ namespace Hapy.Models
 {
     public class Likes: BasePost
     {
+        public Guid PostId { get; set; }
     }
 }

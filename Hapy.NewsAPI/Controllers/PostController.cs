@@ -30,7 +30,7 @@ namespace Hapy.NewsAPI.Controllers
             return GetJsonResult(new BaseResponse()
             {
                 ResponseObject = new MiddelLayer.Posts().HideRecords(search, hideType),
-                Message = "",
+                Message = "Action taken on this post successfully.",
                 StatusCode = 200
             });
         }
@@ -42,7 +42,7 @@ namespace Hapy.NewsAPI.Controllers
             return GetJsonResult(new BaseResponse()
             {
                 ResponseObject = new MiddelLayer.Posts().Like(likes),
-                Message = "",
+                Message = "You liked",
                 StatusCode = 200
             });
         }
@@ -54,7 +54,7 @@ namespace Hapy.NewsAPI.Controllers
             return GetJsonResult(new BaseResponse()
             {
                 ResponseObject = new MiddelLayer.Posts().Share(share),
-                Message = "",
+                Message = "You shared this post successfully.",
                 StatusCode = 200
             });
         }
@@ -66,7 +66,7 @@ namespace Hapy.NewsAPI.Controllers
             return GetJsonResult(new BaseResponse()
             {
                 ResponseObject = new MiddelLayer.Posts().Comment(comments),
-                Message = "",
+                Message = "Your comment saved successfully.",
                 StatusCode = 200
             });
         }
@@ -78,7 +78,7 @@ namespace Hapy.NewsAPI.Controllers
             return GetJsonResult(new BaseResponse()
             {
                 ResponseObject = new MiddelLayer.Posts().Update(comments, action),
-                Message = "",
+                Message = "Your comment updated successfully.",
                 StatusCode = 200
             });
         }
@@ -90,7 +90,7 @@ namespace Hapy.NewsAPI.Controllers
             return GetJsonResult(new BaseResponse()
             {
                 ResponseObject = new MiddelLayer.Posts().SubComment(comments),
-                Message = "",
+                Message = "Your comment saved successfully.",
                 StatusCode = 200
             });
         }
@@ -102,7 +102,7 @@ namespace Hapy.NewsAPI.Controllers
             return GetJsonResult(new BaseResponse()
             {
                 ResponseObject = new MiddelLayer.Posts().Update(comments, action),
-                Message = "",
+                Message = "Your comment updated successfully.",
                 StatusCode = 200
             });
         }

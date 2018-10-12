@@ -43,6 +43,7 @@ namespace Hapy.DB
         public DbSet<OTPVerification> OTPVerification { get; set; }
         public DbSet<AppUserSettings> AppUserSettings { get; set; }
         public DbSet<CallChatSetting> CallChatSestting { get; set; }
+        public DbSet<RecordActionTimes> RecordActionTimes { get; set; }
         public DbSet<UserConnectRequest> UserConnectRequest { get; set; }
         public DbSet<UnRegisterdDevices> UnRegisterdDevices { get; set; }
 
